@@ -12,17 +12,17 @@ Sample source code and data for our ACL 2017 article. Please use the following c
 	pages = {(to appear)},
 	month = aug,
 	year = {2017},
-	abstract = {We investigate neural techniques for end-to-end computational argumentation mining (AM). We frame AM both as a token-based dependency parsing and as a token-based sequence tagging problem, including a multi-task learning setup. Contrary to models that operate on the argument component level, we find that framing AM as dependency parsing leads to subpar performance results. In contrast, less complex (local) tagging models based on BiLSTMs perform robustly across classification scenarios, being able to catch long-range dependencies inherent to the AM problem. Moreover, we find that jointly learning ‘natural’ subtasks, in a multi-task learning setup, improves performance.},
-	location = {Vancouver, Canada},
+	location = {Vancouver, Canada}
 }
 ```
 
 > **Abstract:** We investigate neural techniques for end-to-end computational argumentation mining (AM). We frame AM both as a token-based dependency parsing and as a token-based sequence tagging problem, including a multi-task learning setup. Contrary to models that operate on the argument component level, we find that framing AM as dependency parsing leads to subpar performance results. In contrast, less complex (local) tagging models based on BiLSTMs perform robustly across classification scenarios, being able to catch long-range dependencies inherent to the AM problem. Moreover, we find that jointly learning ‘natural’ subtasks, in a multi-task learning setup, improves performance. 
 
 
-* **Contact persons** Steffen Eger, eger@ukp.informatik.tu-darmstadt.de, Johannes Daxenberger, daxenberger@ukp.informatik.tu-darmstadt.de
+* **Contact persons** 
+    * Steffen Eger, eger@ukp.informatik.tu-darmstadt.de
+    * Johannes Daxenberger, daxenberger@ukp.informatik.tu-darmstadt.de
     * UKP Lab: http://www.ukp.tu-darmstadt.de/
-    * TU Darmstadt: http://www.tu-darmstadt.de/
 
 Drop us a line or report an issue if something is broken (and shouldn't be) or if you have any questions.
 
