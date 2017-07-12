@@ -2,8 +2,9 @@
 
 import sys,codecs
 
-# Convert LSTM-ER output into CONLL format
-# 
+# This converts LSTM-ER output to CONLL data.
+# This is specialized code for Argumentation Mining. It uses heuristics to link arguments in case of AM structure violations.
+
 # SAMPLE USAGE:
 # ./toconll.py out_txt/test_0.split.txt test_0.split.pred.ann > conll/test_0.conll
 
@@ -32,7 +33,6 @@ def readPredictions(fn):
                     relations[link1] = (link2,relation)
             else:
                 relations[link1] = (link2,relation)
-    #print component2Name
     return components,relations
 
 def readText(fn):
@@ -45,6 +45,9 @@ def findClosestClaim(lst):
             closest = None
             closest_val = float("inf")
             for p in lst:
+		if p==x: 
+		#  print "CNT"
+		  continue # added SE
                 if lst[p][-1]=="Claim":
                     if abs(p-x)<closest_val:
                         closest_val = abs(p-x)
@@ -55,26 +58,25 @@ def findClosestClaim(lst):
               closest = None
               closest_val = float("inf")
               for p in lst:
+		if p==x: continue
                 if lst[p][-1]=="Premise":
                     if abs(p-x)<closest_val:
                         closest_val = abs(p-x)
                         closest = p
               myclosest[x] = closest
+    #print myclosest
     return myclosest
 
 
 text = readText(sys.argv[1])
 components,relations = readPredictions(sys.argv[2])
-#print text
-#print components
-#print relations
-#print
 closest = findClosestClaim(components)
+
+#print components,relations,closest
 
 tokenized = text.split()
 i = 0
 token_id = 0
-#print text[420:533]; sys.exit(1)
 label = "O"
 curEnd = None
 curComp = None
@@ -87,18 +89,15 @@ for token in tokenized:
         
 token_id = 0
 i=0
-#print relations; sys.exit(1)
 
 for token in tokenized:
     token_id += 1
     if i in components:
-        #textid2tokenid[i] = token_id
         curEnd = components[i][0]
         curComp = components[i]
         label = "B-"+components[i][-1]
         if i in relations:
             curRel = relations[i]
-#            print "-->",curRel
             pointer = textid2tokenid[curRel[0]]
             rtype = relations[i][-1]
             if components[i][-1]=="Premise":
@@ -109,22 +108,24 @@ for token in tokenized:
                 rest = ""
             #label = label+rest
         else:
+	    # if it's not in the relation set, we do some heuristics
             if components[i][-1]=="Claim":
                 rest = ":For" # heuristically add "For"
             elif components[i][-1]=="Premise":
-                dist = textid2tokenid[closest[i]]
-                rest = ":%d:Support"%(dist)
+		try:
+                  dist = str(textid2tokenid[closest[i]])
+		except KeyError:
+		  dist = "None"
+                rest = ":%s:Support"%(dist)
             else:
                 rest = ""
         label = label+rest
-            #curComp[-1] = curComp[-1]+rest
         i += len(token)+1
         print "\t".join([str(token_id),token,label])
         continue
     if curEnd is not None and i>curEnd:
         label = "O"
     elif curEnd is not None:
-        #print curEnd
         label = "I-"+curComp[-1]+rest
     i += len(token)+1 
     print "\t".join([str(token_id),token,label])
