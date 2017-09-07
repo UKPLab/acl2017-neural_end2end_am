@@ -1,0 +1,9 @@
+1	I	O
+2	like	B-Premise:2:S
+3	this	I-Premise:2:S
+4	sweater	I-Premise:2:S
+5	because	O
+6	it	B-Claim
+7	keeps	I-Claim
+8	me	I-Claim
+9	warm	I-Claim
