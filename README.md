@@ -1,6 +1,6 @@
 # Neural End-to-End Learning for Computational Argumentation Mining
 
-Sample source code and data for our ACL 2017 article. Please use the following citation:
+Sample source code and data for our ACL 2017 [article](http://www.aclweb.org/anthology/P/P17/P17-1002.pdf):
 
 ```
 @inproceedings{TUD-CS-2017-0070,
@@ -9,7 +9,7 @@ Sample source code and data for our ACL 2017 article. Please use the following c
 	publisher = {Association for Computational Linguistics},
 	volume = {Volume 1: Long Papers},
 	booktitle = {Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017)},
-	pages = {(to appear)},
+	pages = {(11--22)},
 	month = aug,
 	year = {2017},
 	location = {Vancouver, Canada}
