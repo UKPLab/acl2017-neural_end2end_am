@@ -1,6 +1,6 @@
 # A Brat to Conll converter
 
-This is due to Ji-Ung Lee. A similar one has been used to convert the original Student Essay corpus into CONLL (tab separated) format.
+This is due to Ji-Ung Lee. A similar script has been used to convert the original Student Essay corpus into CONLL (tab separated) format.
 
 From Ji-Ung's description:
 
