@@ -25,3 +25,8 @@ build/relation/RelationExtraction --test -y yaml/parameter-stab2016.yaml
 
 Note: code is tested only under Fedora 25.
 Most scripts in the ```common``` folder are derived from https://github.com/tticoin/LSTM-ER/tree/master/data/common.
+
+
+## YAML file for LSTM-ER
+
+The yaml file holding the configuration we used for the experiments is included in `params-acl2017.yaml`
