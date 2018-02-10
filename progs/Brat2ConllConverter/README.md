@@ -1,6 +1,6 @@
 # A Brat to Conll converter
 
-This is due to Ji-Ung Lee. A similar script has been used to convert the original Student Essay corpus into CONLL (tab separated) format.
+This is due to Ji-Ung Lee. A similar script has been used to convert the original Student Essay corpus into CONLL (tab separated) format. (*NB* This does not work for relations. If you want to also transform the relations into CONLL format, you have to adapt the script, or else use DKpro.)
 
 From Ji-Ung's description:
 
