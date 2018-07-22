@@ -3,7 +3,7 @@
 Sample source code and data for our ACL 2017 [article](http://www.aclweb.org/anthology/P/P17/P17-1002.pdf):
 
 ```
-@inproceedings{TUD-CS-2017-0070,
+@inproceedings{Eger:2017:ACL,
 	title = {Neural End-to-End Learning for Computational Argumentation Mining},
 	author = {Eger, Steffen and Daxenberger, Johannes and Gurevych, Iryna},
 	publisher = {Association for Computational Linguistics},
