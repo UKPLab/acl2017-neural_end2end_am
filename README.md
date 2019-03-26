@@ -1,6 +1,6 @@
 # Neural End-to-End Learning for Computational Argumentation Mining
 
-Sample source code and data for our ACL 2017 [article](http://www.aclweb.org/anthology/P/P17/P17-1002.pdf):
+Sample source code and data for our ACL 2017 [article](http://aclweb.org/anthology/P17-1002):
 
 ```
 @inproceedings{Eger:2017:ACL,
