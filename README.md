@@ -22,7 +22,6 @@ Sample source code and data for our ACL 2017 [article](http://aclweb.org/antholo
 * **Contact persons** 
     * Steffen Eger, eger@aiphes.tu-darmstadt.de
     * Johannes Daxenberger, daxenberger@ukp.informatik.tu-darmstadt.de
-    * UKP Lab: http://www.ukp.tu-darmstadt.de/
 
 Drop us a line or report an issue if something is broken (and shouldn't be) or if you have any questions.
 
