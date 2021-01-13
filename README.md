@@ -29,8 +29,8 @@ Drop us a line or report an issue if something is broken (and shouldn't be) or i
 
 ## Project structure
 
-* `code` &mdash; Illustrations of how we ran our experimental source codes
-* `data` &mdash; Persuasive Essay data set in CONLL format. Essay and paragraph level given. The original data can be found here: https://www.ukp.tu-darmstadt.de/data/argumentation-mining/argument-annotated-essays-version-2/
+* `[progs](progs/)` &mdash; Illustrations of how we ran our experimental source codes
+* `[data](data/conll)` &mdash; Persuasive Essay data set in CONLL format. Essay and paragraph level given. The original data can be found here: https://www.ukp.tu-darmstadt.de/data/argumentation-mining/argument-annotated-essays-version-2/
 
 ## Data description and formats
 
